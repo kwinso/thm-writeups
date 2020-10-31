@@ -1,13 +1,14 @@
-undermouse, 31.10.2020
-======================
 [THM] Simple CTF
-======================
+==========================
+### undermouse, 31.10.2020
 
+
+# Enviroment
 ```bash
 export IP=10.10.82.177
 ```
 
-#1 How many services are running under port 1000?
+# #1 How many services are running under port 1000?
 ```bash
 # let's check with nmap
 nmap -sC -sV -oN nmap/initial $IP
@@ -16,7 +17,7 @@ nmap -sC -sV -oN nmap/initial $IP
 ```
 2
 ```
-#2 What is running on the higher port?
+# #2 What is running on the higher port?
 
 Nmap has shown **SSH** running on port 2222.
 
@@ -24,17 +25,17 @@ Nmap has shown **SSH** running on port 2222.
 ```
 SSH
 ```
-#3 What's the CVE you're using against the application?
+# #3 What's the CVE you're using against the application?
 There's app running on a web site on _/simple_ path. SQL Injection is our friend!
 ```
 CVE-2019-9053
 ```
 
-#4 To what kind of vulnerability is the application vulnerable?
+# #4 To what kind of vulnerability is the application vulnerable?
 ```
 sqli
 ```
-#5 What's the password?
+# #5 What's the password?
 I've just mirrored the exploit and passed URL with the wordlist.
 Then waited...
 
@@ -48,31 +49,38 @@ email: amdin@amdin.com
 ```
 secret
 ```
-#6 Where can you login with the details obtained?
+# #6 Where can you login with the details obtained?
 ## Answer
 ```
 ssh
 ```
 _ho-ho-ho lets connect!_
 
-#7 What's the user flag?
+# #7 What's the user flag?
 ## Answer
 
 ```
 G00d j0b, keep up!
 ```
-#8 Is there any other user in the home directory? What's its name?
+# #8 Is there any other user in the home directory? What's its name?
 ## Answer
 ```
 sunbath
 ```
-#9 What can you leverage to spawn a privileged shell?
-Ran `sudo -l` and get vim.
+# #9 What can you leverage to spawn a privileged shell?
+
+Ran `sudo -l` and got `vim`.
+## From: https://gtfobins.github.io/gtfobins/vim/#sudo
+
+If the binary is allowed to run as superuser by sudo, it does not drop the elevated privileges and may be used to access the file system, escalate or maintain privileged access.
+```bash
+sudo vim -c ':!/bin/sh'
+```
 ## Answer
 ```
 vim
 ```
-#10 Root flag.
+# #10 Root flag.
 ## Answer
 ```
 W3ll d0n3. You made it!
