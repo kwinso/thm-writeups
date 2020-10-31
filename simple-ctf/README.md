@@ -42,7 +42,7 @@ Then waited...
 Found:
 ```
 username: mitch
-password: **secret**
+password: secret
 email: amdin@amdin.com
 ```
 ## Answer

@@ -1,12 +1,14 @@
-_mouse, 23.09.2020
+[THM] Advent of Cyber, Day 24
+=============================
+### undermouse, 23.09.2020
 
-Advent of Cyber, Day 24
 
+# Enviroment
 ```bash
 export IP=<machine ip>
 ```
 
-
+# Cridentials
 
 l33tperson
 9Qs58Ol3AXkMWLxiEyUyyf
