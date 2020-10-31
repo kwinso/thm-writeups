@@ -1,0 +1,47 @@
+# Nmap 7.80 scan initiated Mon Sep  7 16:32:35 2020 as: nmap -sC -sV -A -oN nmap/aggressive 10.10.156.45
+Nmap scan report for 10.10.156.45
+Host is up (0.094s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 01:9d:50:c0:3d:38:6e:ba:48:0f:d5:ae:e0:24:e2:64 (RSA)
+|   256 2d:1f:90:bb:33:05:b7:96:ce:14:fb:bb:c8:f9:d7:85 (ECDSA)
+|_  256 17:4f:8e:15:0f:67:91:cd:dc:98:ee:4a:f8:67:22:22 (ED25519)
+80/tcp  open  http    Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+| http-title: Santa Naughty and Nice Tracker
+|_Requested resource was showcase.action
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          32963/udp6  status
+|   100024  1          41343/tcp   status
+|   100024  1          44337/tcp6  status
+|_  100024  1          51886/udp   status
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/7%OT=22%CT=1%CU=43593%PV=Y%DS=2%DC=T%G=Y%TM=5F56368E
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=2%ISR=110%TI=Z%CI=Z%II=I%TS=A)SEQ(
+OS:SP=100%GCD=1%ISR=110%TI=Z%II=I%TS=A)OPS(O1=M508ST11NW7%O2=M508ST11NW7%O3
+OS:=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)WIN(W1=68DF%W2=6
+OS:8DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=FF%W=6903%O=M508NNSNW
+OS:7%CC=Y%Q=)T1(R=Y%DF=Y%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF
+OS:=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)T5(R=N)T6(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%
+OS:T=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=FF%IPL=164%UN=0%R
+OS:IPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=FF%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT      ADDRESS
+1   92.78 ms 10.9.0.1
+2   93.06 ms 10.10.156.45
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  7 16:33:02 2020 -- 1 IP address (1 host up) scanned in 27.88 seconds
