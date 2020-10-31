@@ -1,13 +1,14 @@
-undermouse, 31.10.2020
-======================
 [THM] Bounty Hacker
 ======================
+### undermouse, 31.10.2020
+
+# Preparing enviroment
 
 ```bash
 export IP=10.10.133.27
 ```
 
-#3 Who wrote the task list? 
+# 3 Who wrote the task list? 
 ## Answer
 ```
 lin
