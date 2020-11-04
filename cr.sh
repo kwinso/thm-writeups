@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Creates folder with needed stuff for THM CTF
 
 NMAP=0
