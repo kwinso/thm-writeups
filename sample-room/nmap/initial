@@ -1,1 +1,0 @@
-# Nmap 7.91 scan initiated Wed Nov  4 21:50:39 2020 as: nmap -sC -sV -A -oN sample-room/nmap/initial localhost
