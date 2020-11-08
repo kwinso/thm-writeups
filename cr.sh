@@ -9,6 +9,11 @@ case $i in
 	shift
 	shift
 	;;
+	-p|--platform)
+	PLATFORM_NAME="$2"
+	shift
+	shift
+	;;
 	-s|--sample)
 	SAMPLE_FILE="$2"
 	shift
@@ -30,12 +35,13 @@ case $i in
 	-h|--help)
 	echo -e "Create Room Script: Do CTF Routine faster!\n\n
     Options:\n
-    -r | --room - \"Room Name\"\n
+    -r | --room - \"Room Name\" [Will be replaced in sample file] \n
     -s | --sample - /path/to/sample/file\n
-    -u | --user - username\n
+    -u | --user - username [Will be replaced in sample file]\n
     -h | --help - show this message\n
     --ip - if provided, run NMAP scan on this IP. (Usage: --ip=<ip>)\n
-    --host - same as ip, but if you want to use Domain Name. (Usage: --host=<hostname.com>"
+    --host - same as ip, but if you want to use Domain Name. (Usage: --host=<hostname.com>
+	-p | --platform - platform where ctf was created. [Will be replaced in sample file] "
 	exit 0
 	;;
     -*)
@@ -90,8 +96,10 @@ if [ ! -z $SAMPLE_FILE ]; then
 	sed  -i -e "s/!ROOM/${ROOM_NAME}/g" "$DIR_NAME/README.md"
 
 	sed  -i -e "s/!USERNAME/${USERNAME}/g" "$DIR_NAME/README.md"
+
+	sed -i -e "s/!PLATFORM/${PLATFORM_NAME}/g" "$DIR_NAME/README.md"
 else
-	echo "# [THM] Notes by **$USERNAME** for **$ROOM_NAME**, $DATE" > "$DIR_NAME/README.md"
+	echo "# [$PLATFORM_NAME] Notes by **$USERNAME** for **$ROOM_NAME**, $DATE" > "$DIR_NAME/README.md"
 fi
 
 
