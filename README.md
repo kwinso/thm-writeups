@@ -2,7 +2,7 @@
 
 A collection of undermouse's writeups for THM CTFs.
 
-> Here might me answers for some questions. But I'm trying to keep flags censored.
+> Here might me answers for some questions including flags! I'm starting to censor these things, but here still some writeups with answers.
 
 # Scripts
 There's `cr.sh` to create sample notes and run nmap.
