@@ -1,9 +1,8 @@
 # THM Writeups
 
-Here will be all writeups for rooms that I've competed.
+A collection of undermouse's writeups for THM CTFs.
 
-
-## Here will be answers for tasks, be careful!
+> Here might me answers for some questions. But I'm trying to keep flags censored.
 
 # Scripts
 There's `cr.sh` to create sample notes and run nmap.
